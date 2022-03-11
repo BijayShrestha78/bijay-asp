@@ -1,8 +1,39 @@
-﻿
+﻿@model List<WebApplication1.Models.employee>
 @{
     ViewBag.Title = "mainview";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    int sn = 0;
 }
+<style>
+    table, td, th {
+        background-color: blue;
+    }
+    </style>
+<h2>employee list</h2>
+<table class="table" border="1">
+    <tr>
+        <th>employeeid</th>
+        <th>last name</th>
+        <th>first name</th>
+        <th>date time</th>
+        <th>address</th>
+        <th>city</th>
+    </tr>
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@(++sn)</td>
+            <td>@data.employeeID</td>
+            <td>@data.lastname</td>
+            <td>@data.firstname</td>
+            <td>@data.birthdate</td>
+            <td>@data.address</td>
+            <td>@data.city</td>
+        </tr>
 
-<h2>mainview</h2>
+
+    }
+</table>
+
+
+
 

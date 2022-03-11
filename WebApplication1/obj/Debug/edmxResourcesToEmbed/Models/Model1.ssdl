@@ -11,7 +11,25 @@
     <Property Name="address" Type="nvarchar" MaxLength="60" />
     <Property Name="city" Type="nvarchar" MaxLength="15" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'student.dbo.student' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="nchar" MaxLength="10" />
+  </EntityType>
   <EntityContainer Name="studentModelStoreContainer">
     <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="student" EntityType="Self.student" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [student].[id] AS [id], 
+    [student].[name] AS [name], 
+    [student].[phone] AS [phone]
+    FROM [dbo].[student] AS [student]</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>
