@@ -24,13 +24,7 @@ namespace WebApplication1.Controllers
 
 
         }
-        public ActionResult savedata(employee employee)
-        {
-
-            db.employees.Add(employee);
-            db.SaveChanges();
-            return RedirectToAction("mainview");
-        }
+       
     }
 
 

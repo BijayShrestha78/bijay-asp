@@ -220,6 +220,7 @@
     <Content Include="Views\student\student.cshtml" />
     <Content Include="Views\view1.cshtml" />
     <Content Include="Views\Main\Create.cshtml" />
+    <Content Include="Views\Home\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
