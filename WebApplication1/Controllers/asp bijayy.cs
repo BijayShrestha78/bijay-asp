@@ -7,7 +7,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class aspbijay : Controller
+    public class aspbijayController : Controller
     {
         mainEntities db= new mainEntities();
 
@@ -15,6 +15,11 @@ namespace WebApplication1.Controllers
         public ActionResult mainview()
         {
             List<employee> data = db.employees.ToList();
+            return View();
+        }
+
+        public ActionResult Create()
+        {
             return View();
         }
     }

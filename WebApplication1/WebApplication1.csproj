@@ -218,6 +218,8 @@
     <Content Include="Views\Main\mainview.cshtml" />
     <Content Include="Views\Main\index.cshtml" />
     <Content Include="Views\student\student.cshtml" />
+    <Content Include="Views\view1.cshtml" />
+    <Content Include="Views\Main\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
